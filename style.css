@@ -1,5 +1,6 @@
 body {background-color:rgb(232,236,253);}
 h1 {color:navi;}
+div{text-align: justify;}
 
 img:hover{
   opacity:0.5;
@@ -7,12 +8,8 @@ img:hover{
 img{
   opacity:1;
   filter:alpha(opacity=100);}
+img.bgimg{z-index:-1;}
 
-div.pad{padding: 25px 100px 100px 100px;}
-div.height{height: 300px;}
-
-
-div{text-align: justify;}
 div.h200{height:200px;}
 /*div {
   border-style:dotted;

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+  var vidBtnClick = 0;
+
+  function hidevid(){
+    //if clicked = false --> make invisible, button active, clicked=true
+    if (vidBtnClick==0){
+    document.getElementById("vid").style.visibility="hidden";
+    document.getElementById("vidbtn").className += " active";
+    vidBtnClick = 1;
+    }
+    //if clicked = true --> make visible, button inactive, clicked=false
+    else{
+    document.getElementById("vid").style.visibility="visible";
+    document.getElementById("vidbtn").className = "btn btn-primary";
+    vidBtnClick = 0;
+  }
+  }
+
+  </script>
+</head>
+
+<body>
+<center>
+  <img src="images/image.png" id="vid">
+  <button class="btn btn-primary" type="button" id="vidbtn" onclick="hidevid()">test</button>
+</center>
+</body>

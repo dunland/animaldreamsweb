@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Animal Dreams</title>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, inital-scale=1">
 
@@ -16,7 +16,81 @@
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+	<script>
+  var vidBtnClick = 1;
+	var picBtnClick = 1;
+	var musBtnClick = 1;
+	var macBtnClick = 1;
+
+  function hidevid(){
+    //if clicked = false --> make invisible, button active, clicked=true
+    if (vidBtnClick==1){
+    document.getElementById("vid").style.visibility="hidden";
+    document.getElementById("vidbtn").className = "btn btn-default";
+    vidBtnClick = 0;
+    }
+    //if clicked = true --> make visible, button inactive, clicked=false
+    else{
+    document.getElementById("vid").style.visibility="visible";
+    document.getElementById("vidbtn").className += " active";
+    vidBtnClick = 1;
+  	}
+  }
+	function hidemus(){
+	  //if clicked = false --> make invisible, button active, clicked=true
+	  if (musBtnClick==1){
+	  document.getElementById("mus").style.visibility="hidden";
+	  document.getElementById("musbtn").className = "btn btn-default";
+	  musBtnClick = 0;
+	  }
+	  //if clicked = true --> make visible, button inactive, clicked=false
+	  else{
+	  document.getElementById("mus").style.visibility="visible";
+	  document.getElementById("musbtn").className += " active";
+	  musBtnClick = 1;
+		}
+	}
+	function hidepic(){
+	  //if clicked = false --> make invisible, button active, clicked=true
+	  if (picBtnClick==1){
+	  document.getElementById("pic").style.visibility="hidden";
+	  document.getElementById("picbtn").className = "btn btn-default";
+	  picBtnClick = 0;
+	  }
+	  //if clicked = true --> make visible, button inactive, clicked=false
+	  else{
+	  document.getElementById("pic").style.visibility="visible";
+	  document.getElementById("picbtn").className += " active";
+	  picBtnClick = 1;
+	  }
+	}
+	function hidemac(){
+		//if clicked = false --> make invisible, button active, clicked=true
+		if (macBtnClick==1){
+		document.getElementById("mac").style.visibility="hidden";
+		document.getElementById("macbtn").className = "btn btn-default";
+		macBtnClick = 0;
+		}
+		//if clicked = true --> make visible, button inactive, clicked=false
+		else{
+		document.getElementById("mac").style.visibility="visible";
+		document.getElementById("macbtn").className += " active";
+		macBtnClick = 1;
+		}
+	}
+
+  </script>
+
+	<title>Animal Dreams</title>
 </head>
+
+
 <body>
 	<div class="page-header">
 		<p><center><h1>ANIMAL DREAMS</h1></center></p>
@@ -26,10 +100,10 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<center>
-			<p><button type="button" class="btn btn-default">Fotos</button>
-			<button type="button" class="btn btn-default">Videos</button>
-			<button type="button" class="btn btn-default">Musik</button>
-			<button type="button" class="btn btn-default">Maschinen</button></p>
+			<p><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepic()">Fotos</button>
+			<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevid()">Videos</button>
+			<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
+			<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemac()">Maschinen</button></p>
 			</center>
 		</div>
 	</div>
@@ -39,16 +113,17 @@
 
 		<!--LOOPINGS II-->
 		<div class="col-xs-12 col-sm-4 col-md-3">
-			<div class="thumbnail">
+			<div class="" id="mus">
 				<a href="images/loopingsII.jpg">
-					<img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II">
+					<img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" class="bgimg">
 				</a>
+				<div class="center">ASD</div>
 			</div>
 		</div>
 
 		<!--EISLAND VIDEO-->
 		<div class="col-xs-12 col-sm-4 col-md-3">
-			<div class="media thumbnail">
+			<div class="media" id="vid">
 				<div class="embed-responsive embed-responsive-16by9 h200">
 					<iframe src="https://player.vimeo.com/video/99192601" style="width:100%" style="height:auto"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					<p><a href="https://vimeo.com/99192601">Eisland</a> from <a href="https://vimeo.com/robodaff">daff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
@@ -58,8 +133,8 @@
 		</div>
 
 		<!--other-->
-		<div class="col-sm-4 col-md-3">TO DO:<br>-jquery lernen -> seite interaktiv machen<br>-inhalte füllen.</div>
-		<div class="col-md-3">fgh</div>
+		<div class="col-sm-4 col-md-3"><b>TO DO:</b><br>-jquery lernen -> seite interaktiv machen</div>
+		<div class="col-md-3">-inhalte füllen.</div>
 </div>
 
 <!--Row 3-->
