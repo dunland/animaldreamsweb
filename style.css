@@ -12,9 +12,11 @@ div{text-align: justify;}
 .imgcenter:hover{
   visibility:visible;
 }
-img:hover{
-  opacity:0.5;
-  filter:alpha(opacity=50);}
+
+#proj:hover{
+  /*opacity:0.5;
+  filter:alpha(opacity=50);}*/
+  projOpacity();
 img{
   opacity:1;
   filter:alpha(opacity=100);}

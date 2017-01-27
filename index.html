@@ -28,6 +28,7 @@
 	var musBtnClick = 1;
 	var macBtnClick = 1;
 
+//CHANGE FUNCTIONS! CLASSES SHOULD BE CALLED, NOT IDs.
   function hidevid(){
     //if clicked = false --> make invisible, button active, clicked=true
     if (vidBtnClick==1){
@@ -85,6 +86,12 @@
 		}
 	}
 
+	function projOpacity(){
+		document.getElementById("this.projimg").style.opacity="0.5"; //makes the project image transparent
+		document.getElementById("this.projtitle").style.visibility="visible"; //should make the project title visible
+		//only temporarily!
+	}
+
   </script>
 
 	<title>Animal Dreams</title>
@@ -113,9 +120,10 @@
 
 		<!--LOOPINGS II-->
 		<div class="col-xs-12 col-sm-4 col-md-3">
-			<div id="mus" style="position:relative">
-				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" class="bgimg"></a>
-				<div class="imgcenter">ASD</div>
+			<!--AN ELEMENT CAN ONLY HAVE ONE ID, THUS CLASSES ARE NEEDED TO CALL THEM BY FUNCTIONS AND CSS!-->
+			<div id="mus" style="position:relative"> <!--class "mus" needed for buttons, "proj" for visibility effects-->
+				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" id="projimg"></a>
+				<div id="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
 			</div>
 		</div>
 
