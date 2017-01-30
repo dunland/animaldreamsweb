@@ -87,11 +87,17 @@
 	}
 
 	function projOpacity(){
+		document.getElementByClassName("this.projimg").style.opacity="0.5";
+		document.getElementByClassName("this.projtitle").style.visibility="visible";
+	}
+
+/*
+	function projOpacity(){
 		document.getElementById("this.projimg").style.opacity="0.5"; //makes the project image transparent
 		document.getElementById("this.projtitle").style.visibility="visible"; //should make the project title visible
 		//only temporarily!
 	}
-
+*/
   </script>
 
 	<title>Animal Dreams</title>
@@ -118,12 +124,17 @@
 	<!--Row 2-->
 	<div class="row-eq-height">
 
+		<!--Die Erde ist eine Scheibe-->
+		<div class="col-sm-4 col-md-3" id="mac">
+			<a href="images/erde_scheibe_small.jpg"><img src="images/erde_scheibe_small.jpg" style="width:100%" alt="Die Erde ist eine Scheibe"></a>
+		</div>
+
 		<!--LOOPINGS II-->
 		<div class="col-xs-12 col-sm-4 col-md-3">
 			<!--AN ELEMENT CAN ONLY HAVE ONE ID, THUS CLASSES ARE NEEDED TO CALL THEM BY FUNCTIONS AND CSS!-->
-			<div id="mus" style="position:relative"> <!--class "mus" needed for buttons, "proj" for visibility effects-->
-				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" id="projimg"></a>
-				<div id="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
+			<div class="mus" style="position:relative"> <!--class "mus" needed for buttons, "proj" for visibility effects-->
+				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" class="projimg"></a>
+				<div class="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
 			</div>
 		</div>
 
@@ -139,8 +150,7 @@
 		</div>
 
 		<!--other-->
-		<div class="col-sm-4 col-md-3"><b>TO DO:</b><br>-jquery lernen -> seite interaktiv machen</div>
-		<div class="col-md-3">-inhalte füllen.</div>
+		<div class="col-md-3">yeyeyeyeyeyeyeyey ich bin ein div!</div>
 </div>
 
 <!--Row 3-->
