@@ -87,8 +87,8 @@
 	}
 
 	function projOpacity(){
-		document.getElementById("this.projimg").style.opacity="0.5"; //makes the project image transparent
-		document.getElementById("this.projtitle").style.visibility="visible"; //should make the project title visible
+		document.getElementByClassName("this.projimg").style.opacity="0.5"; //makes the project image transparent
+		document.getElementByClassName("this.projtitle").style.visibility="visible"; //should make the project title visible
 		//only temporarily!
 	}
 
@@ -107,10 +107,10 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<center>
-			<p><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepic()">Fotos</button>
+			<button type="button" class="btn btn-default active" id="picbtn" onclick="hidepic()">Fotos</button>
 			<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevid()">Videos</button>
 			<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
-			<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemac()">Maschinen</button></p>
+			<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemac()">Maschinen</button>
 			</center>
 		</div>
 	</div>
@@ -122,8 +122,8 @@
 		<div class="col-xs-12 col-sm-4 col-md-3">
 			<!--AN ELEMENT CAN ONLY HAVE ONE ID, THUS CLASSES ARE NEEDED TO CALL THEM BY FUNCTIONS AND CSS!-->
 			<div id="mus" style="position:relative"> <!--class "mus" needed for buttons, "proj" for visibility effects-->
-				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" id="projimg"></a>
-				<div id="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
+				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" class="projimg"></a>
+				<div class="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
 			</div>
 		</div>
 
@@ -139,7 +139,7 @@
 		</div>
 
 		<!--other-->
-		<div class="col-sm-4 col-md-3"><b>TO DO:</b><br>-jquery lernen -> seite interaktiv machen</div>
+		<div class="col-sm-4 col-md-3"><b>TO DO:</b><p>-jquery lernen -> seite interaktiv machen</p></div>
 		<div class="col-md-3">-inhalte füllen.</div>
 </div>
 

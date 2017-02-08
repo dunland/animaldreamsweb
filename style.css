@@ -1,22 +1,40 @@
 body {background-color:rgb(232,236,253);}
+div{padding:3px;}
 h1 {color:navi;}
-div{text-align: justify;}
-.imgcenter{
+p{
+  font-family:"Kalinga", Sans-Serif, Arial;
+  text-align:justify;
+}
+
+div.imgcenter{
   text-align:center;
   position:absolute;
   top:50%;
   width:100%;
+  font-family:"Kalinga", Sans-Serif, Arial;
   font-size:36px;
   visibility:visible;
 }
-.imgcenter:hover{
+
+/*VISIBILITY OF PROJECT-TEXTS*/
+/*div.imgcenter{visibility:hidden;}
+div.imgcenter:hover{
   visibility:visible;
-}
+}*/
 
 #proj:hover{
   /*opacity:0.5;
   filter:alpha(opacity=50);}*/
   projOpacity();
+}
+
+.left{
+  float:left;
+}
+img.projimg:hover{
+  opacity:0.5;
+  filter:alpha(opacity=50);
+}
 img{
   opacity:1;
   filter:alpha(opacity=100);}
