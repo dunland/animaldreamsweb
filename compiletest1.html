@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inital-scale=1">
+  <link rel="stylesheet" type="text/css" href="compiletest1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--BOOTSTRAP-->
+
+  <!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+  var vidBtnClick = 1;
+  var picBtnClick = 1;
+  var musBtnClick = 1;
+  var macBtnClick = 1;
+
+  //HIDE MUSIC UPON CLICK
+    function hidemus(){
+      if (musBtnClick==1){
+        var x = document.getElementsByClassName("mus");
+        var i;
+        for (i = 0; i<x.length;i++){
+          x[i].style.visibility="hidden";
+        }
+        document.getElementById("musbtn").className = "btn btn-default"; //deactivate button graphics
+        musBtnClick = 0;
+      }else{
+        var x = document.getElementsByClassName("mus");
+        var i;
+        for (i = 0; i<x.length;i++){
+          x[i].style.visibility="visible";
+        }
+        document.getElementById("musbtn").className += " active"; //activate button graphics
+        musBtnClick = 1;
+      }
+    }
+
+  //HIDE PICTURES UPON CLICK
+    function hidepics(){
+      if (picBtnClick==1){
+        var x = document.getElementsByClassName("pic");
+        var i;
+        for (i = 0; i<x.length;i++){
+          x[i].style.visibility="hidden";
+        }
+        document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
+        picBtnClick = 0;
+      }else{
+        var x = document.getElementsByClassName("pic");
+        var i;
+        for (i = 0; i<x.length;i++){
+          x[i].style.visibility="visible";
+        }
+        document.getElementById("picbtn").className += " active"; //activate button graphics
+        picBtnClick = 1;
+      }
+    }
+
+//HIDE INSTALLATIONS UPON CLICK
+  function hidemacs(){
+    if (macBtnClick==1){
+      var x = document.getElementsByClassName("mac");
+      var i;
+      for (i = 0; i<x.length;i++){
+        x[i].style.visibility="hidden";
+      }
+      document.getElementById("macbtn").className = "btn btn-default"; //deactivate button graphics
+      macBtnClick = 0;
+    }else{
+      var x = document.getElementsByClassName("mac");
+      var i;
+      for (i = 0; i<x.length;i++){
+        x[i].style.visibility="visible";
+      }
+      document.getElementById("macbtn").className += " active"; //activate button graphics
+      macBtnClick = 1;
+    }
+  }
+
+//HIDE VIDEOS UPON CLICK
+  function hidevids(){
+    if (vidBtnClick==1){
+      var x = document.getElementsByClassName("vid");
+      var i;
+      for (i = 0; i<x.length;i++){
+        x[i].style.visibility="hidden";
+      }
+      document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
+      vidBtnClick = 0;
+    }else{
+      var x = document.getElementsByClassName("vid");
+      var i;
+      for (i = 0; i<x.length;i++){
+        x[i].style.visibility="visible";
+      }
+      document.getElementById("vidbtn").className += " active"; //activate button graphics
+      vidBtnClick = 1;
+    }
+  }
+
+/*  function projOpacity(){
+    document.getElementByClassName("projimg").style.opacity="0.5"; //makes the project image transparent
+    document.getElementByClassName("projtitle").style.visibility="visible"; //should make the project title visible
+    //only temporarily!
+  }*/
+
+  </script>
+
+
+</head>
+<body>
+ <div class="head">
+    <center><h1>HEADER</h1>
+      <p><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">Fotos</button>
+      	<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevids()">Videos</button>
+      	<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
+      	<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button></p>
+    </center>
+  </div>
+  <div style="height:120px" style="width:100%"></div> <!-- an invisible div behind the header-->
+  <div class="container" style="top:120px"> <!--will start only underneath the invisible div-->
+    <div class="box"><center>1asd</center></div>
+    <div class="box vid">2.1.<img scr="images/image.png"></div>
+    <div class="box vid">2.2.videotestinger</div>
+    <div class="box mac">3<img src="images/image.png"></div>
+    <div class="box mus">4<img src="images/loopingsII.jpg"></div>
+    <div class="box pic">5<br>
+      <br>-href-Inhalte: einfach neue pages pro link mit komplettem css aufbau statt JavaScript-Tricks
+      <br>-Seitendesign
+      <br>-Bannergröße relativ zur Seitenbreite
+    	<br>-Inhalte: Erdscheibe, Andorra I & II, Fotos</div>
+  </div>
+  <div>
+      <center><ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul></center>
+    </div>
+</body>
+</html>
