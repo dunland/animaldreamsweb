@@ -4,9 +4,8 @@ html, body{
   height:100%
 }
 
-img{
-  width:100%;
-  max-width:300px;
+div{
+    border-style:solid;
 }
 
 div.header{
@@ -31,13 +30,42 @@ div.header{
   right:0;
 }
 
-.block{
-  /*height:200px;*/
-  margin:auto; /* horizontally centers all .block elements*/
-  max-width:50%;
-  padding:0px;
-  display: inline-block;
-  border-width:5px;
-  border-style:dotted;
-  vertical-align:top;
+.container{
+  position:relative;
+  margin:auto;
+  width:70%;
+  border:dotted;
+  border-color:red;
+  text-align: justify;
 }
+
+.container img{
+  width:90%;
+  padding:2vw;
+}
+
+/*two boxes are created on this site: left for pics, right for text. not to be confused with boxes on index.html*/
+.column{
+  display:inline-block;
+  vertical-align: top;
+  width:45%;
+}
+
+/*.left{
+  position: absolute;
+  left:0px;
+  display:inline-block;
+  vertical-align: top;
+  margin:auto;
+  width:45%;
+  height:200px;
+}*/
+
+/*.right{
+  position: absolute;
+  right:45%;
+  display:inline-block;
+  vertical-align: top;
+  margin:auto;
+  height:200px;
+}*/

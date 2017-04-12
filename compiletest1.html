@@ -111,12 +111,12 @@
 
 </head>
 <body>
- <div class="head">
-    <center><h1>HEADER</h1>
-      <p><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">Fotos</button>
+ <div class="head" id="header">
+    <center>HEADER
+      <br><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">Fotos</button>
       	<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevids()">Videos</button>
       	<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
-      	<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button></p>
+      	<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button>
     </center>
   </div>
   <div style="height:120px" style="width:100%"></div> <!-- an invisible div behind the header-->
@@ -127,9 +127,10 @@
     <div class="box mac">3<img src="images/image.png"></div>
     <div class="box mus">4<img src="images/loopingsII.jpg"></div>
     <div class="box pic">5<br>
+      <br>-bug fix: header title / nav bar scale
       <br>-href-Inhalte: einfach neue pages pro link mit komplettem css aufbau statt JavaScript-Tricks
       <br>-Seitendesign
-      <br>-Bannergröße relativ zur Seitenbreite
+      <br>-schrift erscheint bei mouseover project oder ähnlich.
     	<br>-Inhalte: Erdscheibe, Andorra I & II, Fotos</div>
   </div>
   <div>
@@ -138,6 +139,6 @@
         <li><a href="#">2</a></li>
         <li><a href="#">3</a></li>
       </ul></center>
-    </div>
+  </div>
 </body>
 </html>
