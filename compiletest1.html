@@ -24,7 +24,7 @@
         for (i = 0; i<x.length;i++){
           x[i].style.visibility="hidden";
         }
-        document.getElementById("musbtn").className = "btn btn-default"; //deactivate button graphics
+        document.getElementById("musbtn").className = "btn-sm btn-default"; //deactivate button graphics
         musBtnClick = 0;
       }else{
         var x = document.getElementsByClassName("mus");
@@ -45,7 +45,7 @@
         for (i = 0; i<x.length;i++){
           x[i].style.visibility="hidden";
         }
-        document.getElementById("picbtn").className = "btn btn-default"; //deactivate button graphics
+        document.getElementById("picbtn").className = "btn-sm btn-default"; //deactivate button graphics
         picBtnClick = 0;
       }else{
         var x = document.getElementsByClassName("pic");
@@ -66,7 +66,7 @@
       for (i = 0; i<x.length;i++){
         x[i].style.visibility="hidden";
       }
-      document.getElementById("macbtn").className = "btn btn-default"; //deactivate button graphics
+      document.getElementById("macbtn").className = "btn-sm btn-default"; //deactivate button graphics
       macBtnClick = 0;
     }else{
       var x = document.getElementsByClassName("mac");
@@ -87,7 +87,7 @@
       for (i = 0; i<x.length;i++){
         x[i].style.visibility="hidden";
       }
-      document.getElementById("vidbtn").className = "btn btn-default"; //deactivate button graphics
+      document.getElementById("vidbtn").className = "btn-sm btn-default"; //deactivate button graphics
       vidBtnClick = 0;
     }else{
       var x = document.getElementsByClassName("vid");
@@ -107,32 +107,50 @@
   }*/
 
   </script>
-
-
 </head>
+
+
 <body>
+
+  <!--header-->
  <div class="head" id="header">
-    <center>HEADER
-      <br><button type="button" class="btn btn-default active" id="picbtn" onclick="hidepics()">Fotos</button>
-      	<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevids()">Videos</button>
-      	<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
-      	<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button>
+    <center><h1>H E A D E R</h1>
+      <br><button type="button" class="btn-sm btn-default active" id="picbtn" onclick="hidepics()">F o t o s</button>
+      	<button type="button" class="btn-sm btn-default active" id="vidbtn" onclick="hidevids()">V id eo s</button>
+      	<button type="button" class="btn-sm btn-default active" id="musbtn" onclick="hidemus()">M u s i k</button>
+      	<button type="button" class="btn-sm btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button>
     </center>
   </div>
-  <div style="height:120px" style="width:100%"></div> <!-- an invisible div behind the header-->
+  <div style="height:120px" style="width:100%" style="border-style:double"></div> <!-- an invisible div behind the header-->
+
+<!--container and body-->
   <div class="container" style="top:120px"> <!--will start only underneath the invisible div-->
-    <div class="box"><center>1asd</center></div>
-    <div class="box vid">2.1.<img scr="images/image.png"></div>
-    <div class="box vid">2.2.videotestinger</div>
-    <div class="box mac">3<img src="images/image.png"></div>
-    <div class="box mus">4<img src="images/loopingsII.jpg"></div>
+    <div class="box mac"><a href="erdscheibe/erdscheibe.html"><img src="erdscheibe/erdschProjThumb.png"></a>
+    <div class="text"><span>Die Erde ist eine Scheibe</span></div>
+    </div>
+    <div class="box mus">
+      <a href="https://andorra-osna.bandcamp.com/album/2016"><img src="images/loopingsII.jpg"></a>
+        <div class="text"><span>Andorra - 2016</span></div></div>
+    <div class="box vid"><iframe src="https://player.vimeo.com/video/161944614"
+      width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="box vid mus"><iframe src="https://player.vimeo.com/video/99192601"
+       width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+     </div>
+    <div class="box mus"><a href="https://andorra-osna.bandcamp.com/album/2015"><img src="images/loopingsI.png"></a>
+      <div class="text"><span>Andorra - 2015</span></div></div>
     <div class="box pic">5<br>
-      <br>-bug fix: header title / nav bar scale
       <br>-href-Inhalte: einfach neue pages pro link mit komplettem css aufbau statt JavaScript-Tricks
       <br>-Seitendesign
-      <br>-schrift erscheint bei mouseover project oder ähnlich.
-    	<br>-Inhalte: Erdscheibe, Andorra I & II, Fotos</div>
+      <br>-mouseover project: h1 --> project title. description in other div?
+    	<br>-Inhalte: Erdscheibe, Andorra I & II, Fotos
+      <br>-font-size scaling: 1.75vw, minimum fonz-size?
+      <br>-buttons: style/text
+      <br>-background-image: scans aus notizbüchern
+    </div>
   </div>
+
+  <!--footer-->
   <div>
       <center><ul class="pagination">
         <li><a href="#">1</a></li>
@@ -140,5 +158,6 @@
         <li><a href="#">3</a></li>
       </ul></center>
   </div>
+
 </body>
 </html>

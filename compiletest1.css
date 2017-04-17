@@ -3,19 +3,28 @@ html,body{
   padding:0px;
 }
 
+h1{display:inline;}
+
 div.head{
-  background-color: red;
   position:fixed;
+  z-index:10;
   top:0px;
   height:10vw;
   max-height:120px;
   width:100%;
-  font-size:5vw;
+  /*background-color:red*/
+  /*border:dotted;*/
 }
+
+div.head h1{
+  font-style: justify;
+  color:rgb(76, 185, 185);
+  font-size:5vw;
+  letter-spacing:3vw;}
 
 div.container{
   position:static;
-  background-color: lightblue;
+  /*background-color: lightblue;*/
   margin:auto; /*margin:auto and max-width will put the container into the middle of the screen*/
   max-width: 80%; /*margin:auto and max-width will put the container into the middle of the screen*/
   height:100%;
@@ -23,15 +32,46 @@ div.container{
 }
 
 div.box{
-  position:static;
+  position:relative;
   display:inline-block; /*will put them all in a line*/
   vertical-align: top; /*prevents boxes to misplace vertically*/
-  margin:20px;
-  border: 3px solid green;
-  width: 300px;
-  height: 300px;
+  margin:1vw;
+  /*border: 3px solid green;*/
+
+  max-width:300px; /*width and height of the boxes scale from 300px to 200px*/
+  width:30vw;
+  min-width:200px;
+  max-height:300px;
+  height: 30vw;
+  min-height:200px;
 }
 
-img{
+div.box iframe{
+  position:relative;
+}
+
+div.box img{
   max-width:100%; /*will confine the width of an image to the maximum of its container*/
+  position:absolute;
+  opacity: 0.8;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+div.box img:hover{
+  opacity:0.4;
+  filter:alpha(opacity=40);
+}
+
+div.text{
+  position:relative;
+  vertical-align: middle;
+  text-align:center;
+  top:33%;
+  font-size:28px;
+  letter-spacing: 1vw;
+  color:rgb(76, 185, 185);
+}
+
+div.text span{
+  background-color:white;
 }

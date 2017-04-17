@@ -4,12 +4,11 @@ html, body{
   height:100%
 }
 
-div{
+/*div{
     border-style:solid;
-}
+}*/
 
 div.header{
-  /*background-image:url("header.png");*/
   height:120px;
   width:100%;
   position:relative;
@@ -18,7 +17,7 @@ div.header{
   border:0;
   margin:0;
   padding:0;
-  outline-color:red;
+  /*outline-color:red;*/
 }
 
 .center{
@@ -28,44 +27,33 @@ div.header{
   bottom:0;
   left:0;
   right:0;
+  border:dotted;
 }
 
 .container{
   position:relative;
   margin:auto;
   width:70%;
-  border:dotted;
-  border-color:red;
   text-align: justify;
+  /*border:dotted;
+  border-color:red;*/
 }
 
-.container img{
+.banner img{
+  padding:0px;
+  width:100%;
+}
+
+.column img{
   width:90%;
-  padding:2vw;
+  padding:2vw 2vw 2vw 0px;
 }
 
-/*two boxes are created on this site: left for pics, right for text. not to be confused with boxes on index.html*/
+/*left column for images*/
 .column{
   display:inline-block;
   vertical-align: top;
+  float:left;
   width:45%;
+  /*font-size:1.75vw; font size should have a minimum value!*/
 }
-
-/*.left{
-  position: absolute;
-  left:0px;
-  display:inline-block;
-  vertical-align: top;
-  margin:auto;
-  width:45%;
-  height:200px;
-}*/
-
-/*.right{
-  position: absolute;
-  right:45%;
-  display:inline-block;
-  vertical-align: top;
-  margin:auto;
-  height:200px;
-}*/
