@@ -1,160 +1,189 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--BOOTSTRAP-->
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, inital-scale=1">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <title>D U N L A N D projects</title>
+    <script>
+        var vidBtnClick = 1;
+        var picBtnClick = 1;
+        var musBtnClick = 1;
+        var macBtnClick = 1;
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+        //HIDE MUSIC UPON CLICK
+        function hidemus() {
+            if (musBtnClick == 1) {
+                var x = document.getElementsByClassName("mus");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "hidden";
+                }
+                document.getElementById("musbtn").className = "btn-sm btn-default"; //deactivate button graphics
+                musBtnClick = 0;
+            } else {
+                var x = document.getElementsByClassName("mus");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "visible";
+                }
+                document.getElementById("musbtn").className += " active"; //activate button graphics
+                musBtnClick = 1;
+            }
+        }
 
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        //HIDE PICTURES UPON CLICK
+        function hidepics() {
+            if (picBtnClick == 1) {
+                var x = document.getElementsByClassName("pic");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "hidden";
+                }
+                document.getElementById("picbtn").className = "btn-sm btn-default"; //deactivate button graphics
+                picBtnClick = 0;
+            } else {
+                var x = document.getElementsByClassName("pic");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "visible";
+                }
+                document.getElementById("picbtn").className += " active"; //activate button graphics
+                picBtnClick = 1;
+            }
+        }
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        //HIDE INSTALLATIONS UPON CLICK
+        function hidemacs() {
+            if (macBtnClick == 1) {
+                var x = document.getElementsByClassName("mac");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "hidden";
+                }
+                document.getElementById("macbtn").className = "btn-sm btn-default"; //deactivate button graphics
+                macBtnClick = 0;
+            } else {
+                var x = document.getElementsByClassName("mac");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "visible";
+                }
+                document.getElementById("macbtn").className += " active"; //activate button graphics
+                macBtnClick = 1;
+            }
+        }
 
+        //HIDE VIDEOS UPON CLICK
+        function hidevids() {
+            if (vidBtnClick == 1) {
+                var x = document.getElementsByClassName("vid");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "hidden";
+                }
+                document.getElementById("vidbtn").className = "btn-sm btn-default"; //deactivate button graphics
+                vidBtnClick = 0;
+            } else {
+                var x = document.getElementsByClassName("vid");
+                var i;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.visibility = "visible";
+                }
+                document.getElementById("vidbtn").className += " active"; //activate button graphics
+                vidBtnClick = 1;
+            }
+        }
 
-
-	<!--jQuery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-
-	<script>
-  var vidBtnClick = 1;
-	var picBtnClick = 1;
-	var musBtnClick = 1;
-	var macBtnClick = 1;
-
-//CHANGE FUNCTIONS! CLASSES SHOULD BE CALLED, NOT IDs.
-  function hidevid(){
-    //if clicked = false --> make invisible, button active, clicked=true
-    if (vidBtnClick==1){
-    document.getElementById("vid").style.visibility="hidden";
-    document.getElementById("vidbtn").className = "btn btn-default";
-    vidBtnClick = 0;
-    }
-    //if clicked = true --> make visible, button inactive, clicked=false
-    else{
-    document.getElementById("vid").style.visibility="visible";
-    document.getElementById("vidbtn").className += " active";
-    vidBtnClick = 1;
-  	}
-  }
-	function hidemus(){
-	  //if clicked = false --> make invisible, button active, clicked=true
-	  if (musBtnClick==1){
-	  document.getElementById("mus").style.visibility="hidden";
-	  document.getElementById("musbtn").className = "btn btn-default";
-	  musBtnClick = 0;
-	  }
-	  //if clicked = true --> make visible, button inactive, clicked=false
-	  else{
-	  document.getElementById("mus").style.visibility="visible";
-	  document.getElementById("musbtn").className += " active";
-	  musBtnClick = 1;
-		}
-	}
-	function hidepic(){
-	  //if clicked = false --> make invisible, button active, clicked=true
-	  if (picBtnClick==1){
-	  document.getElementById("pic").style.visibility="hidden";
-	  document.getElementById("picbtn").className = "btn btn-default";
-	  picBtnClick = 0;
-	  }
-	  //if clicked = true --> make visible, button inactive, clicked=false
-	  else{
-	  document.getElementById("pic").style.visibility="visible";
-	  document.getElementById("picbtn").className += " active";
-	  picBtnClick = 1;
-	  }
-	}
-	function hidemac(){
-		//if clicked = false --> make invisible, button active, clicked=true
-		if (macBtnClick==1){
-		document.getElementById("mac").style.visibility="hidden";
-		document.getElementById("macbtn").className = "btn btn-default";
-		macBtnClick = 0;
-		}
-		//if clicked = true --> make visible, button inactive, clicked=false
-		else{
-		document.getElementById("mac").style.visibility="visible";
-		document.getElementById("macbtn").className += " active";
-		macBtnClick = 1;
-		}
-	}
-
-	function projOpacity(){
-		document.getElementByClassName("this.projimg").style.opacity="0.5"; //makes the project image transparent
-		document.getElementByClassName("this.projtitle").style.visibility="visible"; //should make the project title visible
-		//only temporarily!
-	}
-
-  </script>
-
-	<title>Animal Dreams</title>
+        /*  function projOpacity(){
+            document.getElementByClassName("projimg").style.opacity="0.5"; //makes the project image transparent
+            document.getElementByClassName("projtitle").style.visibility="visible"; //should make the project title visible
+            //only temporarily!
+          }*/
+    </script>
 </head>
 
 
 <body>
-	<div class="header">
-		<p><center><h1>ANIMAL DREAMS</h1></center></p>
-		<div class="row">
-			<div class="col-xs-12">
-				<center>
-				<button type="button" class="btn btn-default active" id="picbtn" onclick="hidepic()">Fotos</button>
-				<button type="button" class="btn btn-default active" id="vidbtn" onclick="hidevid()">Videos</button>
-				<button type="button" class="btn btn-default active" id="musbtn" onclick="hidemus()">Musik</button>
-				<button type="button" class="btn btn-default active" id="macbtn" onclick="hidemac()">Maschinen</button>
-				</center>
-			</div>
-		</div>
-	</div>
 
-<div class="container">
-	<!--Row 1-->
-	<div class="row-eq-height">
+    <!--header-->
+    <div class="head" id="header">
+        <center>
+            <h1>D U N L A N D</h1>
+            <br><button type="button" class="btn-sm btn-default active" id="picbtn" onclick="hidepics()">F o t o s</button>
+            <button type="button" class="btn-sm btn-default active" id="vidbtn" onclick="hidevids()">V id eo s</button>
+            <button type="button" class="btn-sm btn-default active" id="musbtn" onclick="hidemus()">M u s i k</button>
+            <button type="button" class="btn-sm btn-default active" id="macbtn" onclick="hidemacs()">Maschinen</button>
+        </center>
+    </div>
+    <div style="height:120px" style="width:100%"></div>
+    <!-- an invisible div behind the header-->
 
-		<!--LOOPINGS II-->
-		<div class="col-xs-12 col-sm-4 col-md-3">
-			<!--AN ELEMENT CAN ONLY HAVE ONE ID, THUS CLASSES ARE NEEDED TO CALL THEM BY FUNCTIONS AND CSS!-->
-			<div id="mus" style="position:relative"> <!--class "mus" needed for buttons, "proj" for visibility effects-->
-				<a href="images/loopingsII.jpg"><img src="images/loopingsII.jpg" style="width:100%" alt="Bild: loopings II" class="projimg"></a>
-				<div class="projtitle" class="imgcenter">ASDFGGHH</div><!--<div class="imgcenter">ASD</div>-->
-			</div>
-		</div>
+    <!--container and body-->
+    <div class="container" style="top:120px">
 
-		<!--EISLAND VIDEO-->
-		<div class="col-xs-12 col-sm-4 col-md-3">
-			<div class="media" id="vid">
-				<div class="embed-responsive embed-responsive-16by9 h200">
-					<iframe src="https://player.vimeo.com/video/99192601" style="width:100%" style="height:auto"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					<p><a href="https://vimeo.com/99192601">Eisland</a> from <a href="https://vimeo.com/robodaff">daff</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-				</div>
-				<div class="caption">asd</div>
-			</div>
-		</div>
+        <!--will start only underneath the invisible div-->
+        <!-- Erdscheibe -->
+        <div class="box mac">
+            <a href="erdscheibe/erdscheibe.html"><img src="erdscheibe/erdschProjThumb.png"></a>
+            <div class="text"><span>Die Erde ist eine Scheibe</span></div>
+        </div>
 
-		<!--other-->
-		<div class="col-sm-4 col-md-3"><b>TO DO:</b>
-			<br>-href-Inhalte in container
-			<br>-jQuery/buttons funktionierend: <a href="https://www.w3schools.com/jquery/jquery_hide_show.asp">toggle</a>
-			<br>-Inhalte: Erdscheibe, Andorra I & II, Fotos
-		</div>
-		<div class="col-md-3">knasterkataster.</div>
-</div>
+        <!-- Loopings II -->
+        <div class="box mus">
+            <a href="https://andorra-osna.bandcamp.com/album/2016"><img src="images/loopingsII.jpg"></a>
+            <div class="text"><span>Andorra - 2016</span></div>
+        </div>
 
-<!--Row 3-->
-	<div class="row">
-		<div class="col-xs-12">
-			<center><ul class="pagination">
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-			</ul></center>
-		</div>
-	</div>
-</div>
+        <!-- Selbstporträt I -->
+        <div class="box vid">
+            <a href="https://vimeo.com/161944614"><img src="images/kopfsache.jpg"></a>
+            <div class="text"><span>Self-Portrait I</span></div>
+        </div>
+
+        <!-- EISLAND -->
+        <div class="box vid mus">
+            <a href="https://vimeo.com/99192601"><img src="images/eisland.jpg"></a>
+            <div class="text"><span>EISLAND</span></div>
+        </div>
+
+        <!-- Loopings I -->
+        <div class="box mus">
+            <a href="https://andorra-osna.bandcamp.com/album/2015"><img src="images/loopingsI.png"></a>
+            <div class="text"><span>Andorra - 2015</span></div>
+        </div>
+
+        <!-- Iceland pictures -->
+        <div class="box pic">
+            <a href="iceland/iceland.html"><img src="images/iceland.jpg"></a>
+            <div class="text"><span>pictures from iceland</span></div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <!-- <div>
+      <center><ul class="pagination">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+      </ul></center>
+  </div> -->
+
+    <!--bottom line (contact)-->
+    <p>
+        <div class="bottom" width="100%">
+            <center>Kontakt: <img src="images/mailto.png" title="da vid [at] un land .eu" width="155px" height="22px"></center>
+        </div>
+    </p>
+
 </body>
+
+</html>
