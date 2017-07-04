@@ -1,3 +1,6 @@
+10:19 04.05.2017
+-Email/Kontakt & about & HOME auf jeder Projektseite (sonst weiﬂ man nicht wo man ist wenn man extern verlinkt wird)
+
 12:14 26.04.2017
 -aufbau index auf smartphone?
 -responsive Erdscheibe, gallery
