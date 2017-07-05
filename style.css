@@ -7,9 +7,10 @@ h1 {
     display: inline;
 }
 
-/*div{
-  border:dotted;
-}*/
+div{
+  /*border:dotted;*/
+  background-color:rgba(255,255,255,0);
+}
 
 div.head {
     /*header area on top with responsive height*/
@@ -33,7 +34,6 @@ div.head h1 {
 }
 
 div.container {
-    background-color: rgba(170, 94, 39, 0.43);
     border-color:blue;
     position: static;
     margin: auto;
