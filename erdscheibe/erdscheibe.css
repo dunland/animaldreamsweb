@@ -16,7 +16,6 @@ div.head{ /*header area on top with responsive height*/
   height:10vw;
   max-height:120px;
   width:100%;
-  background-color:white;
   /*border:dotted;*/
 }
 
